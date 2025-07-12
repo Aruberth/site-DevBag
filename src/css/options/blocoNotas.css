@@ -1,0 +1,99 @@
+#bloco_de_notas_espaco {
+    border: 2px solid rgba(0, 0, 0, 0.272);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    background-color: #4d5a788d;
+
+    height: 700px;
+    width: 900px;
+}
+
+#barra_Superior {
+    border-radius: 8px 8px 0px 0px;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    /*efeito de vidro*/
+    background: rgba(47, 52, 70, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(50, 63, 99, 0.34);
+    /*efeito de vidro*/
+}
+
+#local_notas {
+    display: flex;
+    flex-direction: row;
+}
+
+.notas_Individuais {
+    margin: 3px;
+    border-radius: 5px;
+    border: 2px black solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 30px;
+    width: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /*efeito de vidro*/
+    background: rgba(168, 193, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    /*efeito de vidro*/
+}
+
+.notas_Individuais.ativa {
+        background: rgba(67, 109, 215, 0.32);
+
+}
+
+.excluir {
+    margin-left: 8px;
+    color: black;
+    font-weight: bold;
+    cursor: grab;
+}
+
+.excluir:hover {
+    opacity: 0.5;
+}
+
+.adicionar_Nota {
+    cursor: grab;
+    height: 20px;
+    width: 20px;
+    /*efeito de vidro*/
+    background: rgba(168, 193, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    border-radius: 10px;
+    /*efeito de vidro*/
+}
+
+.adicionar_Nota:hover {
+    opacity: 0.7;
+}
+
+.adicionar_Nota:active {
+    opacity: 0.5;
+}
+
+#texto_Bloco {
+    width: 99%;
+    height: 645px;
+    margin: 5px;
+    resize: none;
+    border-radius: 4px;
+}

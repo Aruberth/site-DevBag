@@ -1,0 +1,93 @@
+.popUp_Fundo {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /*Pra garantir que fica emcima dos outros*/
+}
+
+.popUp_Fundo.ativo {
+    display: flex;
+}
+
+.popup_Display {
+    display: none;
+}
+
+.popup_Display.active{
+    display: block;
+}
+
+#caixa_popUp {
+    border: 1px rgba(168, 168, 168, 0.648) solid;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    height: 350px;
+    width: 550px;
+    position: relative;
+    background-color: aliceblue;
+}
+
+.botao_Fechar{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 20px;
+    cursor: grab;
+}
+
+/*newsletter*/
+
+#newsletter {
+    padding: 30px 10px 10px 10px;
+}
+
+#newsletter h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#newsletter p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#newsletter label {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#newsletter input[type="email"] {
+    width: 400px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: lighter
+}
+
+#newsletter input[type="submit"]{
+    padding: 20px;
+    margin-top: 70px;
+    margin-left: 200px;
+    padding: 16px 24px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#newsletter input[type="submit"]:hover{
+    background-color: #034f85;
+}
+
+/*sigame*/
+

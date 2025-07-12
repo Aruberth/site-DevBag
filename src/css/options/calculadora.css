@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+:root {
+
+  --cor-fundo-sombra: #151515;
+  --cor-visor: #000000;
+}
+
+#calculadora_espaco {
+    background: var(--cor-profunda);
+    margin: 5px green solid;
+    border-radius: 10px;
+    padding: 10px;
+    width: 500px;
+    height: 650px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    background: #2b2b2b;
+    box-shadow: 0 4px var(--cor-fundo-sombra);
+}
+
+#visor_calculadora {
+    font-family: "Tektur", sans-serif;    
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background: var(--cor-visor);
+    color: green;
+    text-align: end;
+    font-size: 60px;
+    border: none;
+    width: 480px;
+}
+
+#espaco_teclas_calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+#espaco_teclas_calculadora .tecla_calculadora {
+    padding: 30px;
+
+    background: #3A506B;
+    box-shadow: 0 4px #263545;
+    color: black;
+    border: none;
+    border-radius: 7px;
+    transition: all 0.2s;
+    font-size: 30px;
+    color: hsl(266, 16%, 92%);
+}
+
+#espaco_teclas_calculadora .tecla_calculadora:hover {
+    filter: brightness(0.85);
+}
+
+#espaco_teclas_calculadora .tecla_calculadora:active {
+    filter: brightness(0.8);
+    box-shadow: 0 2px #263545;
+    transform: translateY(2px);
+}
+
+#espaco_teclas_calculadora .tecla_calculadora.teclas_azul {
+    background-color: var(--cor-acento);
+    background: #5BC0BE;
+    box-shadow: 0 4px #3a8887;
+}
+
+#espaco_teclas_calculadora .tecla_calculadora.teclas_azul:active {
+    box-shadow: 0 2px #3a8887;
+}
+
+#espaco_teclas_calculadora .tecla_calculadora.teclas_horizontal {
+    grid-column: span 2;
+    background-color: var(--cor-acento);
+    background: #F0A202;
+    box-shadow: 0 4px #a56b00;
+}
+
+#espaco_teclas_calculadora .tecla_calculadora.teclas_horizontal:active {
+    box-shadow: 0 2px #a56b00;
+}
+
+#espaco_teclas_calculadora .tecla_calculadora.teclas_vertical {
+    grid-row: span 2;
+    background: var(--cor-destaque);
+    background: #F0A202;
+    box-shadow: 0 4px #a56b00;
+}
+
+#espaco_teclas_calculadora .tecla_calculadora.teclas_vertical:active {
+    box-shadow: 0 2px #a56b00;
+}
