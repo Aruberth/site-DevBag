@@ -6,7 +6,7 @@
 ### 1- Clone o repositorio:
 
 ```
-git clone ---
+git clone https://github.com/Aruberth/site-DevBag.git
 ``` 
 
 ## Execução:
