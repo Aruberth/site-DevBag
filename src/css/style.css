@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Russo+One&display=swap');
 
 :root {
-    /*cores*/
     --preto: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
     --cor-do-fundo: hsl(266, 16%, 92%);
@@ -10,27 +9,6 @@
     --cor-escura-2: hsl(256, 10%, 10%);
     --cor-escura-3: hsl(257, 11%, 16%);
     --cor-escura-4: hsl(270, 2%, 25%);
-
-    --cor-do-fundo: hsl(266, 16%, 92%);
-  --cor-clara-1: hsl(260, 30%, 85%);
-  --cor-clara-2: hsl(250, 25%, 78%);
-  --cor-clara-3: hsl(240, 20%, 70%);
-
-  /* Tons médios */
-  --cor-media-1: hsl(240, 30%, 50%);
-  --cor-media-2: hsl(250, 35%, 45%);
-  --cor-media-3: hsl(260, 40%, 40%);
-
-  /* Tons escuros */
-  --cor-escura-1: hsl(256, 12%, 12%);
-  --cor-escura-2: hsl(256, 10%, 10%);
-  --cor-escura-3: hsl(257, 11%, 16%);
-  --cor-escura-4: hsl(270, 2%, 25%);
-  --cor-escura-5: hsl(255, 15%, 20%);
-
-  /* Detalhes / destaque */
-  --cor-destaque-1: hsl(220, 80%, 55%);
-  --cor-destaque-2: hsl(210, 90%, 60%);
 }
 
 * {
@@ -46,7 +24,7 @@
 }
 
 .tela {
-    display: none; /*Para começar invisível*/
+    display: none;
 }
 
 .tela.active {
@@ -64,10 +42,7 @@ a {
 }
 
 button {
-    margin: 0;
-    padding: 0;
-    background: none;
-    border: none; 
+    all: unset;
 }
 
 /*---------HEADER---------*/
@@ -115,7 +90,6 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* ícone e texto alinhados à esquerda */
     color: var(--white);
     text-decoration: none;
     padding: 15px 5px 15px 10px;
@@ -138,7 +112,6 @@ header h1 {
 #menu button {
     display: flex;
     align-items: center;
-    justify-content: center;
     /* ícone e texto alinhados à esquerda */
     color: var(--white);
     text-decoration: none;
@@ -149,6 +122,7 @@ header h1 {
 
 #menu div button {
     width: 100%;
+    padding-right: 100px;
 }
 
 #menu button:hover {
@@ -174,7 +148,6 @@ header h1 {
 
 #menu:hover .option_name {
     width: 120px;
-    /* tamanho suficiente para o texto */
     margin-left: 10px;
 }
 
@@ -306,4 +279,53 @@ footer p {
     text-align: center;
     color: var(--cor-do-fundo);
     font-size: 11px;
+}
+
+/* Responsividade geral */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        margin: 10px;
+        left: 0;
+        top: 120px;
+        right: 0;
+        position: static;
+    }
+    #caixa_esquerda, #caixa_direita {
+        width: 95vw;
+        height: auto;
+        margin: 10px 0;
+    }
+    #menu {
+        width: 100vw;
+        height: 60px;
+        flex-direction: row;
+        position: static;
+        margin-top: 0;
+    }
+    #menu:hover {
+        width: 100vw;
+    }
+    .option_name {
+        width: auto;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+    #caixa_esquerda, #caixa_direita {
+        width: 98vw;
+        padding: 5px;
+        font-size: 16px;
+    }
+    .opcao_direita {
+        width: 90vw;
+        font-size: 16px;
+    }
+    footer p {
+        font-size: 9px;
+    }
 }

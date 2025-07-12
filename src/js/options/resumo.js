@@ -23,5 +23,5 @@ function fazerOutroResumo() {
     document.getElementById("valor").value = "";
     document.getElementById("data").value = "";
     document.getElementById("resumo_Pronto").style.display = "none";
-    document.getElementById("caixa").style.display = "block";
+    document.getElementById("caixa").style.display = "flex";
 }

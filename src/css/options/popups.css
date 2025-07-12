@@ -20,9 +20,6 @@
     display: none;
 }
 
-.popup_Display.active{
-    display: block;
-}
 
 #caixa_popUp {
     border: 1px rgba(168, 168, 168, 0.648) solid;
@@ -47,6 +44,7 @@
 
 #newsletter {
     padding: 30px 10px 10px 10px;
+    flex-direction: column;
 }
 
 #newsletter h2 {
@@ -90,4 +88,89 @@
 }
 
 /*sigame*/
+
+#sigame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#sigame h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#sigame a {
+    font-size: 80px;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+#sigame a:hover{
+    filter: brightness(0.8);
+}
+
+.fab.fa-github-square {
+    color: #333;
+}
+
+.fab.fa-instagram-square {
+    color: #E4405F;
+}
+
+.fab.fa-youtube-square {
+    color: #FF0000;
+}
+
+#sugestoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sugestoes h2 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#sugestoes textarea {
+    width: 500px;
+    height: 200px;
+}
+
+#sugestoes button {
+    margin-top: 20px;
+    border: 2px black solid;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: hsl(257, 11%, 16%);
+    color: white;
+    transition: 0.3s;
+}
+#sugestoes button:hover {
+    background-color: hsl(257, 8%, 33%);
+    cursor: grab;
+}
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+#sobre h2{
+    padding-bottom: 15px;
+    font-size: 35px;
+}
+
+#sobre p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+
 
