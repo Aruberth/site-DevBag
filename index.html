@@ -1,51 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-   <head>
-      <link rel="stylesheet" href="styles.css" />
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>FacilDev</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-   </head>
-   <body style="background-color: #4d686f; width: 1905px; height: 1080px; margin:0">
-      <div class="container">
-         <header>
-            <h1 class="">
-              FacilDev
-            </h1>
-         </header>
-         <div class="leftColumStyle">
-            <div>
-               <button class="up">
-                  <span class="textButton">Calculadora</span>
-               </button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DevBag</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="src/css/style.css">
+        <link rel="stylesheet" href="src/css/options/calculadora.css">
+        <link rel="stylesheet" href="src/css/options/blocoNotas.css">
+        <link rel="stylesheet" href="src/css/options/lousa.css">
+        <link rel="stylesheet" href="src/css/options/resumo.css">
+        <link rel="stylesheet" href="src/css/options/popups.css"
+    </head>
+    <body>
+        <header class="container">
+            <img
+                src="src/assets/images/logo.png"
+                width="130px"
+                height="110px"
+            />
+            <h1>DevBag</h1>
+        </header>
+        <div id="menu" class="container">
+            <button href="#">
+                <i class="fa-solid fa-house fa-2x"></i>
+                <p class="option_name">Início</p>
+            </button>
+            <button onclick="mostrarPopUp()">
+                <i class="fa-solid fa-newspaper fa-2x"></i>
+                <p class="option_name">Newsletter</p>
+            </button>
+            <button href="#">
+                <i class="fa-solid fa-heart fa-2x"></i>
+                <p class="option_name">Siga-me</p>
+            </button>
+            <div style="margin-top: auto; padding-bottom: 130px">
+                <button href="#">
+                    <i class="fa-solid fa-lightbulb fa-2x"></i>
+                    <p class="option_name">Sugestões</p>
+                </button>
+                <button href="#">
+                    <i class="fa-solid fa-question fa-2x"></i>
+                    <p class="option_name">Sobre</p>
+                </button>
             </div>
-            <div>
-               <button class="mid">
-                  <span class="textButton">Conversor de temperatura</span>
-               </button>
+        </div>
+        <main>
+            <div id="caixa_esquerda"> <!--AQUI DENTRO FICAM AS FUNCIONALIDADES-->
+                <div id="calculadora_espaco" class="tela">
+                    <input id="visor_calculadora" disabled></input>
+                    <div id="espaco_teclas_calculadora">
+                        <button type="button" onclick="apagar_Visor()" class="tecla_calculadora teclas_horizontal">C</button>
+                        <button type="button" onclick="adicionar_Valor ('/')" class="tecla_calculadora teclas_azul">/</button>
+                        <button type="button" onclick="adicionar_Valor ('*')" class="tecla_calculadora teclas_azul">*</button>
+                        <button type="button" onclick="adicionar_Valor ('7')" class="tecla_calculadora">7</button>
+                        <button type="button" onclick="adicionar_Valor ('8')" class="tecla_calculadora">8</button>
+                        <button type="button" onclick="adicionar_Valor ('9')" class="tecla_calculadora">9</button>
+                        <button type="button" onclick="adicionar_Valor ('-')" class="tecla_calculadora teclas_azul">-</button>
+                        <button type="button" onclick="adicionar_Valor ('4')" class="tecla_calculadora">4</button>
+                        <button type="button" onclick="adicionar_Valor ('5')" class="tecla_calculadora">5</button>
+                        <button type="button" onclick="adicionar_Valor ('6')" class="tecla_calculadora">6</button>
+                        <button type="button" onclick="adicionar_Valor ('+')" class="tecla_calculadora teclas_azul">+</button>
+                        <button type="button" onclick="adicionar_Valor ('1')" class="tecla_calculadora">1</button>
+                        <button type="button" onclick="adicionar_Valor ('2')" class="tecla_calculadora">2</button>
+                        <button type="button" onclick="adicionar_Valor ('3')" class="tecla_calculadora">3</button>
+                        <button type="button" onclick="somar()" class="tecla_calculadora teclas_vertical">=</button>
+                        <button type="button" onclick="adicionar_Valor ('0')" class="tecla_calculadora teclas_horizontal">0</button>
+                        <button type="button" onclick="adicionar_Valor ('.')" class="tecla_calculadora">.</button>
+                    </div>
+                </div>
+                <div id="bloco_de_notas_espaco" class="tela">
+                    <div id="barra_Superior">
+                        <div id="local_notas"></div> <!--Notas serão adicionadas dentro dessa div.-->  
+                    <button onclick="adicionarNota()" class="adicionar_Nota">+</button>
+                    </div>
+                    <div id="area_Texto">
+                        <textarea
+                            id="texto_Bloco"
+                            placeholder="Escreva aqui seu texto..."
+                        ></textarea>
+                    </div>
+                </div>
+                <div id="lousa_interativa_espaco" class="tela">
+                    <canvas id="lousa" width="850" height="600"></canvas>
+                    <div id="lousa_configuracoes">
+                        <div>
+                            <label for="cor">Cor:</label> 
+                            <input type="color" id="cor" value="#000000">
+                        </div>
+                        <div>
+                            <label for="espessura">Espessura:</label>
+                            <input type="range" id="espessura" min="1" max="20" value="3">
+                        </div>
+                        <button type="button" id="apagar">Apagar</button>
+                    </div>
+                </div>
+                <div id="resumo_espaco" class="tela">
+                    <div id="caixa">
+                        <div>
+                            <h3>Digite as informações do cliente</h3>
+                            <label>Nome</label>
+                            <input type="text" id="nome"/>
+                            <label>Sobrenome</label>
+                            <input type="text" id="sobrenome"/>
+                        </div>
+                        <div>
+                            <h3>Digite as informações do produto comprado</h3>
+                            <label>Produto:</label>
+                            <input type="text" id="produto"/>
+                            <label>Valor</label>
+                            <input type="text" id="valor"/>
+                            <label>Data da compra</label>
+                            <input type="date" id="data"/>
+                        </div>
+                        <button onclick="gerarResumo()">Gerar</button>
+                    </div>
+                    <div id="resumo_Pronto">
+                        <h3>Resumo da Venda:</h3>
+                        <div id="textoResumo"></div>
+                        <button onclick="fazerOutroResumo()">Fazer outro resumo</button>
+                    </div>
+                </div>
+            </div> <!--AQUI DENTRO FICAM AS FUNCIONALIDADES-->
+            <div id="caixa_direita">
+                <div>
+                    Escolha uma função
+                </div>
+                <button onclick="alternarAbas('calculadora_espaco')" class="opcao_direita">
+                    <p>Calculadora</p>
+                </button>
+                <button onclick="alternarAbas('bloco_de_notas_espaco')" class="opcao_direita">
+                    <p>Bloco de notas</p>
+                </button>
+                <button onclick="alternarAbas('lousa_interativa_espaco')" class="opcao_direita">
+                    <p>Lousa interativa</p>
+                </button>
+                <button onclick="alternarAbas('resumo_espaco')" class="opcao_direita">
+                    <p>Resumo de venda</p>
+                </button>
             </div>
-            <div>
-               <button class="mid">
-                  <span class="textButton">Conversor de medidas</span>
-               </button>
+        </main>
+        <footer>
+            <p>© 2025 Alberth. Todos os direitos reservados.</p>
+        </footer>
+        <div class="popUp_Fundo" id="popup"> <!--Pop-ups-->
+            <div id="caixa_popUp">
+                <button class="botao_Fechar" onclick="fecharPopUp()">×</button>
+                <div id="newsletter" class="popup_Display">
+                    <h2>Pricnipais noticias sobre tecnologia e automação aqui!</h2>
+                    <p>Se inscreva já, é rapido!</p>
+                    <form>
+                        <label>Email:</label>
+                        <input type="email">
+                        <input type="submit" value="Cadastrar!">
+                    </form>
+                </div>
+                <div id="sigame" class="popup_Display">
+                    <h2>2</h2>
+                </div>
+                <div id="sugestoes" class="popup_Display">
+                    <h2>3</h2>
+                </div>
+                <div id="sobre" class="popup_Display">
+                    <h2>4</h2>
+                </div>
             </div>
-            <div>
-               <button class="mid">
-                  <span class="textButton">Bloco de notas</span>
-               </button>
-            </div>
-            <div>
-               <button class="down">
-                  <span class="textButton">Lousa interativa</span>
-               </button>
-            </div>
-         </div>
-         <footer class="inferiorLine">
-            <p>Site de: Alberth</p>
-         </footer>
-      </div>
-   </body>
+        </div>
+    <script src="src/js/index.js"></script>
+    <script src="src/js/options/calculadora.js"></script>
+    <script src="src/js/options/blocoNotas.js"></script>
+    <script src="src/js/options/lousa.js"></script>
+    <script src="src/js/options/resumo.js"></script>
+    <script src="src/js/options/popups.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/expr-eval@2.0.2/dist/bundle.min.js"></script>
+    </body>
 </html>

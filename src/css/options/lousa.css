@@ -1,0 +1,23 @@
+#lousa_interativa_espaco {
+    height: 100%;
+    padding: 10px;
+    color: white;
+}
+
+#lousa {
+    border: 2px black solid;
+    background-color: white;
+}
+
+#lousa_configuracoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+#apagar {
+    padding: 10px;
+}

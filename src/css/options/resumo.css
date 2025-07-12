@@ -1,0 +1,124 @@
+:root {
+  --cor-fundo: #f0f4f8;
+  --cor-primaria: #4d5a78;
+  --cor-secundaria: #6c7a95;
+  --cor-texto: #ffffff;
+  --cor-botao: #3fa34d;
+  --cor-botao-hover: #348c40;
+}
+
+#resumo_espaco {
+  padding-top: 10px;
+}
+
+#caixa {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+#caixa div {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+#caixa div h3 {
+  margin-top: 0;
+  font-size: 24px;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  padding-bottom: 10px;
+}
+
+#caixa div label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+#caixa div input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#caixa button {
+  margin-top: 20px;
+  align-self: center;
+  padding: 12px 30px;
+  font-size: 20px;
+  background-color: var(--cor-botao);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#caixa button:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+#resumo_Pronto {
+  display: none;
+  background-color: rgba(0,0,0,0.05);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  font-size: 30px;
+}
+
+#resumo_Pronto h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#textoResumo {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+}
+
+#resumo_Pronto button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#resumo_Pronto button:hover {
+  background-color: #c9303a;
+}
+
+/* Responsivo */
+@media screen and (max-width: 600px) {
+  #caixa_esquerda {
+    padding: 15px;
+  }
+
+  #caixa div input {
+    font-size: 14px;
+  }
+
+  #caixa button {
+    font-size: 18px;
+  }
+
+  #resumo_Pronto button {
+    font-size: 16px;
+  }
+}
