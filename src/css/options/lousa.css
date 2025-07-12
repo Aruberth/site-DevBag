@@ -19,5 +19,15 @@
 }
 
 #apagar {
+    font-size: 20px;
     padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #e63946;
+}
+
+#apagar:hover {
+    background-color: #c9303a;
+    cursor: grab;
 }

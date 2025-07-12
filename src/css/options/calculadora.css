@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
 
 :root {
-
-  --cor-fundo-sombra: #151515;
-  --cor-visor: #000000;
+    --cor-fundo-sombra: #151515;
+    --cor-visor: #000000;
 }
 
 #calculadora_espaco {
@@ -41,7 +40,7 @@
 
 #espaco_teclas_calculadora .tecla_calculadora {
     padding: 30px;
-
+    text-align: center;
     background: #3A506B;
     box-shadow: 0 4px #263545;
     color: black;
@@ -93,3 +92,4 @@
 #espaco_teclas_calculadora .tecla_calculadora.teclas_vertical:active {
     box-shadow: 0 2px #a56b00;
 }
+
