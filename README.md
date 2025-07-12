@@ -3,7 +3,7 @@
 
 ## � Visão Geral
 
-DevBag é uma aplicação multifuncional que combina ferramentas úteis em um único painel interativo. Ideal para desenvolvedores, estudantes ou profissionais que precisam de acesso rápido a uma calculadora, bloco de notas, lousa digital e resumo de vendas.
+DevBag é uma aplicação multifuncional que combina ferramentas úteis em um único painel interativo. Ideal para usuários de empresas com limitaões ao acesso de seus usuários que precisam de acesso rápido a uma calculadora, bloco de notas, lousa digital e resumo de vendas.
 
 ### ✨ Funcionalidades
 
@@ -28,13 +28,11 @@ DevBag é uma aplicação multifuncional que combina ferramentas úteis em um ú
 Como altero o tema da interface?
 → A versão atual suporta apenas tema escuro. Novas skins estarão disponíveis em futuras atualizações!
 
-❓ Posso usar offline?
+Posso usar offline?
 → Sim! Todas as funcionalidades funcionam sem conexão com a internet.
 
 
 ## 📌 Requisitos
-
-  ✔️ Dispositivo com teclado numérico ou tela sensível ao toque.
 
   ✔️ Sistema operacional compatível (Windows, Linux, Android ou navegador moderno).
 
