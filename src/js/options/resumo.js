@@ -24,6 +24,7 @@ function fazerOutroResumo() {
     document.getElementById("data").value = "";
     document.getElementById("resumo_Pronto").style.display = "none";
     document.getElementById("caixa").style.display = "flex";
+    atualizarStatusResumo();
 }
 
 function atualizarStatusResumo() {
@@ -54,7 +55,5 @@ function atualizarStatusResumo() {
     document.getElementById(id).addEventListener('input', atualizarStatusResumo);
 });
 
-// Inicializa os quadrados ao carregar
 atualizarStatusResumo();
 
-// ...existing code...
