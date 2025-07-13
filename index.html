@@ -101,32 +101,47 @@
                         <button type="button" id="apagar">Apagar</button>
                     </div>
                 </div>
-                <div id="resumo_espaco" class="tela"> <!------------resumoDeVenda------------>
-                    <div id="caixa">
-                        <div>
-                            <h3>Digite as informações do cliente</h3>
-                            <label>Nome</label>
-                            <input type="text" id="nome"/>
-                            <label>Sobrenome</label>
-                            <input type="text" id="sobrenome"/>
-                        </div>
-                        <div>
-                            <h3>Digite as informações do produto comprado</h3>
-                            <label>Produto:</label>
-                            <input type="text" id="produto"/>
-                            <label>Valor</label>
-                            <input type="text" id="valor"/>
-                            <label>Data da compra</label>
-                            <input type="date" id="data"/>
-                        </div>
-                        <button onclick="gerarResumo()">Gerar</button>
-                    </div>
-                    <div id="resumo_Pronto">
-                        <h3>Resumo da Venda:</h3>
-                        <div id="textoResumo"></div>
-                        <button onclick="fazerOutroResumo()">Fazer outro resumo</button>
-                    </div>
-                </div>
+<div id="resumo_espaco" class="tela">
+    <div id="caixa">
+        <div>
+            <h3>Digite as informações do cliente</h3>
+            <div class="campo-resumo">
+            <label>Nome</label>
+            <input type="text" id="nome"/>
+            <span class="status-quadrado" id="status-nome"></span>
+            </div>
+            <div class="campo-resumo">
+            <label>Sobrenome</label>
+            <input type="text" id="sobrenome"/>
+            <span class="status-quadrado" id="status-sobrenome"></span>
+            </div>
+        </div>
+        <div>
+            <h3>Digite as informações do produto comprado</h3>
+            <div class="campo-resumo">
+            <label>Produto:</label>
+            <input type="text" id="produto"/>
+            <span class="status-quadrado" id="status-produto"></span>
+            </div>
+            <div class="campo-resumo">
+            <label>Valor</label>
+            <input type="text" id="valor"/>
+            <span class="status-quadrado" id="status-valor"></span>
+            </div>
+            <div class="campo-resumo">
+            <label>Data da compra</label>
+            <input type="date" id="data"/>
+            <span class="status-quadrado" id="status-data"></span>
+            </div>
+        </div>
+        <button id="btn-gerar-resumo" onclick="gerarResumo()" disabled>Gerar</button>
+    </div>
+    <div id="resumo_Pronto">
+        <h3>Resumo da Venda:</h3>
+        <div id="textoResumo"></div>
+        <button onclick="fazerOutroResumo()">Fazer outro resumo</button>
+    </div>
+</div>
             </div> 
             <div id="caixa_direita"> <!------------------------CAIXA DIREITA------------------------>
                 <div>
@@ -177,7 +192,6 @@
     <button onclick="enviarSugestao()">Enviar</button>
     <div id="sugestoes-status" class="popup-status"></div>
 </div>
-
                 <div id="sobre" class="popup_Display">
                     <h2>Sobre?</h2>
                     <p>Este site foi desenvolvido como parte da avaliação da disciplina de Introdução as Tecnologias Web (EaD), com o objetivo de aplicar na prática os conceitos aprendidos ao longo do curso. A proposta é criar uma plataforma funcional, com múltiplas funcionalidades, utilizando as linguagens HTML, CSS e JavaScript.</p>
