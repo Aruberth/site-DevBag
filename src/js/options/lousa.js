@@ -1,20 +1,20 @@
 const lousa = document.getElementById('lousa');
-const lousaCtx2d = lousa.getContext('2d'); //pega o contexto 2D da lousa.
+const lousaCtx2d = lousa.getContext('2d'); 
 const corOpcao = document.getElementById('cor')
 const espessuraOpcao = document.getElementById('espessura');
 const apagarOpcao = document.getElementById('apagar');
 
-let desenhando = false; //Por padrão, a variavel booleana de estar desenhando é falsa.
+let desenhando = false;
 
-lousa.addEventListener('mousedown', (e) => {     //..........pedir pro gpt depois explicar dps como funciona essa estrutura do =>
+lousa.addEventListener('mousedown', (e) => {    
     desenhando = true;
-    lousaCtx2d.beginPath(); //Iniciado um novo traço na lousa.
+    lousaCtx2d.beginPath(); 
     lousaCtx2d.moveTo(e.offsetX, e.offsetY);
 });
 
 lousa.addEventListener('mousemove', (e) => {
     if(desenhando) {
-        lousaCtx2d.lineTo(e.offsetX, e.offsetY); //Vai adicionando linha por onde mousa vai passando.
+        lousaCtx2d.lineTo(e.offsetX, e.offsetY); 
         lousaCtx2d.strokeStyle = corOpcao.value;
         lousaCtx2d.lineWidth = espessuraOpcao.value;
         lousaCtx2d.stroke();

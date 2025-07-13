@@ -1,26 +1,26 @@
 const local_Notas = document.getElementById('local_notas');
 const bloco_Texto = document.getElementById('texto_Bloco');
 
-let notas = []; //Para armazenar as notas que forem aparecendo.
-let notaAtual = -1; //Indicar nota atualmente selecionada.
+let notas = []; 
+let notaAtual = -1; 
 
 function renderizar_Abas() {
     local_Notas.innerHTML = '';
 
     notas.forEach((note, index) => {
-        const aba = document.createElement('div'); // Cria nova aba.
-        aba.className = 'notas_Individuais' + (index === notaAtual ? ' ativa' : ''); //Adiciona uma classe de ativa caso a aba esteja ativa.
+        const aba = document.createElement('div'); 
+        aba.className = 'notas_Individuais' + (index === notaAtual ? ' ativa' : ''); 
         
-        const textoAba = document.createElement('p'); // Cria texto da aba.
-        textoAba.className = 'texto_Aba';//Adiciona uma classe de ativa caso a aba esteja ativa.
-        textoAba.textContent = 'Nota ' + (index + 1); //Insere um nome no texto da aba.
-        aba.onclick = () => escolherNota(index); //Ao clicar naquela aba (mais especificamente no texto dentro dela, usa a função informada)
+        const textoAba = document.createElement('p'); 
+        textoAba.className = 'texto_Aba';
+        textoAba.textContent = 'Nota ' + (index + 1);
+        aba.onclick = () => escolherNota(index); 
         
-        const botao_excluir = document.createElement('span'); // Cria botão de excluir aba entro dela.
+        const botao_excluir = document.createElement('span'); 
         botao_excluir.className = 'excluir';
         botao_excluir.textContent = 'x';
-        botao_excluir.onclick = (p) => { //!!! pedir explicacao do funcionamento pro gpt
-            p.stopPropagation(); //Impede que ao clicar no x também clique em outras coisas, como própria aba.
+        botao_excluir.onclick = (p) => { 
+            p.stopPropagation();
             deletarNota(index);
         }
 
@@ -31,7 +31,7 @@ function renderizar_Abas() {
     });
 }
 
-function escolherNota(index){ //!!! pedir explicacao pro gpt
+function escolherNota(index){
     if(notaAtual !== -1) {
         notas[notaAtual].content = bloco_Texto.value;
     }
@@ -40,13 +40,13 @@ function escolherNota(index){ //!!! pedir explicacao pro gpt
     renderizar_Abas();
 }
 
-function adicionarNota() { //!!! pedir explicacao pro gpt
+function adicionarNota() {
     if(notaAtual !== -1){
         notas[notaAtual].content = bloco_Texto.value;
     }
     if(notas.length < 5){
         notas.push({ content: ''});
-        escolherNota(notas.length - 1); //!!!ver pq isso
+        escolherNota(notas.length - 1);
     }else{
         alert("Pode no máximo 5 notas!");
     }
@@ -54,7 +54,7 @@ function adicionarNota() { //!!! pedir explicacao pro gpt
 }
 
 function deletarNota(index) {
-    notas.splice(index, 1); //Serve pra deletar um valor do array
+    notas.splice(index, 1); 
     if(notas.length === 0){
         notaAtual = -1;
         bloco_Texto.value = ``;
