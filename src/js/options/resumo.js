@@ -25,3 +25,36 @@ function fazerOutroResumo() {
     document.getElementById("resumo_Pronto").style.display = "none";
     document.getElementById("caixa").style.display = "flex";
 }
+
+function atualizarStatusResumo() {
+    const campos = [
+        { id: 'nome', statusId: 'status-nome' },
+        { id: 'sobrenome', statusId: 'status-sobrenome' },
+        { id: 'produto', statusId: 'status-produto' },
+        { id: 'valor', statusId: 'status-valor' },
+        { id: 'data', statusId: 'status-data' }
+    ];
+    let tudoPreenchido = true;
+    campos.forEach(campo => {
+        const valor = document.getElementById(campo.id).value.trim();
+        const status = document.getElementById(campo.statusId);
+        if (valor) {
+            status.classList.add('preenchido');
+            status.classList.remove('vazio');
+        } else {
+            status.classList.add('vazio');
+            status.classList.remove('preenchido');
+            tudoPreenchido = false;
+        }
+    });
+    document.getElementById('btn-gerar-resumo').disabled = !tudoPreenchido;
+}
+
+['nome', 'sobrenome', 'produto', 'valor', 'data'].forEach(id => {
+    document.getElementById(id).addEventListener('input', atualizarStatusResumo);
+});
+
+// Inicializa os quadrados ao carregar
+atualizarStatusResumo();
+
+// ...existing code...
