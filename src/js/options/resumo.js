@@ -26,8 +26,6 @@ function fazerOutroResumo() {
     document.getElementById("caixa").style.display = "flex";
 }
 
-// ...existing code...
-
 function atualizarStatusResumo() {
     const campos = [
         { id: 'nome', statusId: 'status-nome' },
@@ -52,7 +50,6 @@ function atualizarStatusResumo() {
     document.getElementById('btn-gerar-resumo').disabled = !tudoPreenchido;
 }
 
-// Adiciona eventos para todos os inputs
 ['nome', 'sobrenome', 'produto', 'valor', 'data'].forEach(id => {
     document.getElementById(id).addEventListener('input', atualizarStatusResumo);
 });
