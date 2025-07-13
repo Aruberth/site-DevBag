@@ -152,27 +152,32 @@
         <div class="popUp_Fundo" id="popup"><!------------------------POPUPS------------------------>
             <div id="caixa_popUp">
                 <button class="botao_Fechar" onclick="fecharPopUp(); fecharConteudoPopUp()">×</button>
-                <div id="newsletter" class="popup_Display">
-                    <h2>Principais noticias sobre tecnologia e automação diretamente no seu e-mail!</h2>
-                    <p>Se inscreva já, é rapido!</p>
-                    <form>
-                        <label>Email:</label>
-                        <input type="email">
-                        <input type="submit" value="Cadastrar!">
-                    </form>
-                </div>
-                <div id="sigame" class="popup_Display">
-                    <h2>Siga-me</h2>
-                    <div>
-                        <a href="https://www.instagram.com/alberth_te/" target="_blank"><i class="fab fa-instagram-square"></i></a>
-                        <a href="https://github.com/Aruberth" target="_blank"><i class="fab fa-github-square"></i></a>
-                    </div>
-                </div>
-                <div id="sugestoes" class="popup_Display">
-                    <h2>Sugestões? Pode enviar!</h2>
-                    <textarea placeholder="Escreva aqui seu texto..."></textarea>
-                    <button onclick="fecharPopUp(); fecharConteudoPopUp()">Enviar</button>
-                </div>
+                <!-- ...existing code... -->
+<div id="newsletter" class="popup_Display">
+    <h2>Principais noticias sobre tecnologia e automação diretamente no seu e-mail!</h2>
+    <p>Se inscreva já, é rapido!</p>
+    <form id="newsletter-form">
+        <label>Email:</label>
+        <input type="email" id="newsletter-email">
+        <span id="nome-status" class="status-icon"></span>
+        <input type="submit" value="Cadastrar!">
+    </form>
+    <div id="newsletter-status" class="popup-status"></div>
+</div>
+<div id="sigame" class="popup_Display">
+    <h2>Siga-me</h2>
+    <div>
+        <a href="https://www.instagram.com/alberth_te/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        <a href="https://github.com/Aruberth" target="_blank"><i class="fab fa-github-square"></i></a>
+    </div>
+</div>
+<div id="sugestoes" class="popup_Display">
+    <h2>Sugestões? Pode enviar!</h2>
+    <textarea id="sugestao-texto" placeholder="Escreva aqui seu texto..."></textarea>
+    <button onclick="enviarSugestao()">Enviar</button>
+    <div id="sugestoes-status" class="popup-status"></div>
+</div>
+
                 <div id="sobre" class="popup_Display">
                     <h2>Sobre?</h2>
                     <p>Este site foi desenvolvido como parte da avaliação da disciplina de Introdução as Tecnologias Web (EaD), com o objetivo de aplicar na prática os conceitos aprendidos ao longo do curso. A proposta é criar uma plataforma funcional, com múltiplas funcionalidades, utilizando as linguagens HTML, CSS e JavaScript.</p>

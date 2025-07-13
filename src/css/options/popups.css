@@ -141,7 +141,7 @@
 }
 
 #sugestoes button {
-    margin-top: 20px;
+    margin-top: 10px;
     border: 2px black solid;
     border-radius: 5px;
     padding: 5px;
@@ -170,7 +170,5 @@
     font-size: 20px;
     text-align: justify;
 }
-
-
 
 
