@@ -51,7 +51,7 @@
 #caixa button {
   align-self: center;
   padding: 12px 30px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 40px;
   font-size: 20px;
   background-color: var(--cor-botao);
@@ -136,8 +136,7 @@
 
 .campo-resumo label {
   min-width: 90px;
-  font-weight: bold;
-  font-size: 15px;
+  font-size: 16 px;
   margin: 0;
 }
 

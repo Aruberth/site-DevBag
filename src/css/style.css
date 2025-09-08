@@ -182,19 +182,6 @@ main {
     align-items: center;
 }
 
-#caixa_esquerda p {
-    padding: 3px;
-    margin: 3px;
-
-    border: 1px #4d5a7854 solid;
-    border-radius: 6px;
-    background-color: #4d5a784c;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-
-    color: var(--cor-do-fundo);
-    text-align: center;
-}
-
 #caixa_direita {
     border: 2px solid black;
     border-radius: 8px;
