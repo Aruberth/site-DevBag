@@ -1,6 +1,6 @@
 <h1 align="center">DevBag</h1>
 
-<div align="center"><img src="src/assets/images/logo.png" style="width: 350px; height: 300px; object-fit: cover; object-position: center"</div> 
+<div align="center"><img src="src/assets/images/favicon.svg" style="width: 350px; height: 300px; object-fit: cover; object-position: center"</div> 
 
 <div align="center"> <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow" alt="Status"> <img src="https://img.shields.io/badge/Version-1.0.0-blue" alt="Versão"></div>
 
