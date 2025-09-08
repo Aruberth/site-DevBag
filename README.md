@@ -1,11 +1,18 @@
-# 📋 README - DevBag
-<div align="center"> <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow" alt="Status"> <img src="https://img.shields.io/badge/Version-1.0.0-blue" alt="Versão"> <img src="https://img.shields.io/badge/License-MIT-green" alt="Licença"> </div>
+<h1 align="center">DevBag</h1>
 
-## � Visão Geral
+<div align="center"><img src="src/assets/images/logo.png" style="width: 350px; height: 300px; object-fit: cover; object-position: center"</div> 
+
+<div align="center"> <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow" alt="Status"> <img src="https://img.shields.io/badge/Version-1.0.0-blue" alt="Versão"></div>
+
+<br>
+
+## Visão Geral
 
 DevBag é uma aplicação multifuncional que combina ferramentas úteis em um único painel interativo. Ideal para usuários de empresas com limitaões ao acesso de seus usuários que precisam de acesso rápido a uma calculadora, bloco de notas, lousa digital e resumo de vendas.
 
-### ✨ Funcionalidades
+<br>
+
+## Funcionalidades
 
 | **Função**            | **Descrição**                                                                 |
 |-----------------------|--------------------------------------------------------------------------------|
@@ -22,18 +29,3 @@ DevBag é uma aplicação multifuncional que combina ferramentas úteis em um ú
   ou
 
  Clone o repositorio `https://github.com/Aruberth/site-DevBag.git` e execute o arquivo **index.html**
-
-## ❓ FAQ
-
-Como altero o tema da interface?
-→ A versão atual suporta apenas tema escuro. Novas skins estarão disponíveis em futuras atualizações!
-
-Posso usar offline?
-→ Sim! Todas as funcionalidades funcionam sem conexão com a internet.
-
-
-## 📌 Requisitos
-
-  ✔️ Sistema operacional compatível (Windows, Linux, Android ou navegador moderno).
-
-  <div align="center"> <p>Feito com ❤️ por Alberth</p> <a href="https://github.com/Aruberth">GitHub</a> | <a href="https://linkedin.com/in/seu-perfil">LinkedIn</a> </div>
