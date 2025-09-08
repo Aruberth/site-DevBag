@@ -41,6 +41,9 @@ function escolherNota(index){
 }
 
 function adicionarNota() {
+    if(notas.length === 0){
+        bloco_Texto.style.display = 'block';
+    }
     if(notaAtual !== -1){
         notas[notaAtual].content = bloco_Texto.value;
     }
@@ -58,11 +61,14 @@ function deletarNota(index) {
     if(notas.length === 0){
         notaAtual = -1;
         bloco_Texto.value = ``;
+        bloco_Texto.style.display = 'none';
+        console.log("era pra ir")
     }else{
         notaAtual = Math.min(index, notas.length - 1);
         bloco_Texto.value = notas[notaAtual].content;
     }
     renderizar_Abas();
+    
 }
 
 adicionarNota();

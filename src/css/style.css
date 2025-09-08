@@ -22,6 +22,7 @@
 .container {
     display: flex;
     flex-direction: row;
+    height: 105px;
 }
 
 .tela {
@@ -73,7 +74,7 @@ header h1 {
 #menu {
     display: flex;
     flex-direction: column;
-    margin-top: 110px;
+    margin-top: 105px;
     width: 60px;
     height: 100vh;
     background-color: var(--cor-escura-4);
