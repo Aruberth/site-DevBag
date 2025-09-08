@@ -32,7 +32,7 @@
 
 .notas_Individuais {
     margin: 3px;
-    border-radius: 5px;
+    border-radius: 3px;
     border: 2px black solid;
     padding-left: 5px;
     padding-right: 5px;
@@ -61,7 +61,7 @@
     margin-left: 8px;
     color: black;
     font-weight: bold;
-    cursor: grab;
+    cursor: pointer;
 }
 
 .excluir:hover {
@@ -70,7 +70,7 @@
 
 .adicionar_Nota {
     text-align: center;
-    cursor: grab;
+    cursor: pointer;
     height: 20px;
     width: 20px;
     /*efeito de vidro*/

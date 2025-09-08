@@ -53,6 +53,7 @@
 
 #espaco_teclas_calculadora .tecla_calculadora:hover {
     filter: brightness(0.85);
+    cursor: pointer;
 }
 
 #espaco_teclas_calculadora .tecla_calculadora:active {

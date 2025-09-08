@@ -29,5 +29,5 @@
 
 #apagar:hover {
     background-color: #c9303a;
-    cursor: grab;
+    cursor: pointer;
 }
